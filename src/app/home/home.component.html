@@ -1,0 +1,20 @@
+<h1>
+    {{titulo}}
+</h1>
+
+<hr>
+
+<input type="text" [(ngModel)]="nuevaPrenda"><button (click)="anadirPrenda()">Añadir prenda</button>
+
+<h4>Lista de prendas</h4>
+<ul>
+    <li *ngFor="let prenda of listaRopa; let i = index">
+        {{prenda}} <button (click)="eliminarPrenda(i)">eliminar</button></li>
+</ul>
+
+<hr>
+<h5>pipes</h5>
+
+<p>Fecha: {{fecha | date:'dd/MM/yyyy'}}</p>
+
+<p>Multiplicacion: {{5 | conversor: 9 | uppercase}}</p>

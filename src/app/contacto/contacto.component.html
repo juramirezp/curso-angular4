@@ -1,0 +1,11 @@
+<h1>
+  {{titulo}}
+</h1>
+
+<pre *ngIf="parametro">
+    {{parametro}}
+</pre>
+
+<pre *ngIf="!parametro">
+    <button (click)="redirigir()">Ir a contacto con parametros</button>
+</pre>
